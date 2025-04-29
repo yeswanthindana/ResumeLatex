@@ -1,0 +1,302 @@
+align to below %%%%%%%%%%%%%%%%%
+% Sample CV template created using altacv.cls
+% Written by LianTze Lim (liantze@gmail.com)
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\usepackage{fontawesome5}
+\usepackage{simpleicons}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{fontawesome5}
+\usepackage{paracol}
+\usepackage{tcolorbox}
+
+\setmainfont{Arial} % or another available font
+\usepackage{xcolor}
+
+\newcommand{\javaicon}{\includegraphics[height=1em]{java.png}}
+\newcommand{\resticon}{\includegraphics[height=1em]{restassured.png}}
+\newcommand{\gridicon}{\includegraphics[height=1em]{grid.png}}
+\newcommand{\javaicon}{\includegraphics[height=1em]{java.png}}
+\newcommand{\pficon}{\includegraphics[height=1em]{pi.png}}
+\newcommand{\APICON}{\includegraphics[height=1em]{AT.png}}
+\newcommand{\HLLicon}{\includegraphics[height=1em]{Hll.png}}
+\newcommand{\MABLicon}{\includegraphics[height=1em]{images.png}}
+\newcommand{\skicon}{\includegraphics[height=1em]{sk.jpeg}}
+\newcommand{\reporticon}{\includegraphics[height=1em]{rp.png}}
+\newcommand{\aiicon}{\includegraphics[height=1em]{AI.png}}
+\newcommand{\JMETERcon}{\includegraphics[height=1em]{JM.jpeg}}
+\newcommand{\cgptcion}{\includegraphics[height=1em]{cgpt.png}}
+\newcommand{\cpticon}{\includegraphics[height=1em]{cpt.jpeg}}
+\newcommand{\AGICON}{\includegraphics[height=1em]{G].png}}
+
+
+
+\newtcolorbox{skillbox}[2][]{%
+  colback=gray!5,
+  colframe=gray!50,
+  boxrule=0.5pt,
+  arc=4pt,
+  left=6pt,
+  right=6pt,
+  top=4pt,
+  bottom=4pt,
+  fontupper=\footnotesize,
+  width=#2,
+  #1
+}
+% Page layout
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Fonts
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Colors
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Font styling
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Markers
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+% Bibliography
+\input{pubs-num.tex}
+\addbibresource{sample.bib}
+
+\begin{document}
+
+\name{Yeswanth Indana}
+\tagline{Technical Test Lead}
+\photoR{2.8cm}{PIC}
+
+\personalinfo{
+  \email{indanayeswanth@gmail.com}
+  \phone{+91-7207239782}
+  \location{Visakhapatnam, Andhra Pradesh}
+  \linkedin{yeswanthindana}
+  \github{yeswanthindana}
+}
+
+\makecvheader
+
+\columnratio{0.5}
+\cvsection{ABOUT ME}
+{\LaTeXraggedright
+Technical QA Leader with 6+ years of experience in software testing and quality assurance, and an aspiring Test Architect. Skilled in test automation, performance testing, and defect tracking across web, mobile, and API platforms. Proven ability to lead teams, define test strategies, and deliver high-quality outcomes in agile environments. Recognized for strong analytical thinking, adaptability, and a results-driven approach.\par}
+
+\begin{paracol}{2}
+\cvsection{Technical Skills}
+
+\begin{itemize}
+  \item[\faCode] \textbf{Programming Languages:} \\
+  \javaicon\ Java \quad |\quad \simpleicon{typescript} TypeScript \quad |\quad \simpleicon{javascript} JavaScript
+
+  \item[\simpleicon{selenium}] \textbf{Automation Tools/Frameworks:} \\
+  \simpleicon{selenium} Selenium \quad |\quad \simpleicon{cucumber} Cucumber \quad |\quad \faCogs TestNG \quad |\quad \simpleicon{apachemaven} Maven \quad |\quad \simpleicon{playwright} Playwright \quad |\quad \simpleicon{cypress} Cypress
+
+  \item[\pficon] \textbf{Performance Testing:} \\
+  \JMETERcon\ JMeter
+
+  \item[\simpleicon{postman}] \textbf{API Testing:} \\
+  \simpleicon{postman} Postman \quad |\quad \resticon\ RestAssured \quad |\quad \simpleicon{swagger} Swagger
+
+  \item[\simpleicon{docker}] \textbf{DevOps Tools:} \\
+  \simpleicon{docker} Docker \quad |\quad \simpleicon{jenkins} Jenkins \quad |\quad \simpleicon{github} GitHub \quad |\quad \simpleicon{github} GitHub Actions \quad |\quad \simpleicon{azuredevops} Azure DevOps Pipeline \quad |\quad \simpleicon{bitbucket} Bitbucket \quad |\quad \gridicon\ Selenium Grid
+
+  \item[\faDatabase] \textbf{Database:} \\
+  \faDatabase SQL
+
+  \item[\faTasks] \textbf{Test and Project Management:} \\
+  \simpleicon{jira} Jira \quad |\quad \simpleicon{hp} HP ALM \quad |\quad \AGICON Agile \quad |\quad \simpleicon{confluence} Confluence
+
+  \item[\aiicon] \textbf{AI-Powered Testing Tools:} \\
+  \APICON\ Applitools \quad |\quad \MABLicon\ Mabl \quad |\quad \HLLicon\ Healenium \quad |\quad \skicon\ SikuliX \quad |\quad \cgptcion\ ChatGPT \quad |\quad \cpticon\ GitHub Copilot
+
+\end{itemize}
+
+
+\cvsection{Experience}
+\cvevent{\faUserTie\ \ Technical Test Lead}{Infosys Limited }{Feb 2024 -- Present}{Hyderabad, Telangana}
+\begin{itemize}
+\item[\faClipboardCheck] Owned test planning, sign-offs, and status reporting.
+\item[\faCogs] Led design and enhancement of scalable, maintainable automation frameworks.
+\item[\faToolbox] Managed test environments and resource allocation for optimized execution.
+\item[\faBug] Triaged defects, ensuring accurate logging, tracking, and resolution.
+\item[\faCodeBranch] Integrated test suites into CI/CD pipelines for continuous testing.
+\item[\faChartLine] Tracked QA metrics and provided insights through weekly reports.
+\item[\faUsers] Collaborated with teams to align on quality standards and requirements.
+\item[\faHourglass] Coordinated sprint-based testing, ensuring timely feedback.
+%\item[\faSearch] Identified improvements in test coverage, refactoring for efficiency.
+%\item[\faShieldAlt] Implemented risk-based testing strategies for high-impact areas.
+%\item[\faSync] Coordinated testing across environments, ensuring synchronization.
+\item[\faRobot] Led knowledge-sharing and mentored junior testers for skill development.
+
+\end{itemize}
+
+\divider
+
+\cvevent{\faUser\ \ Test Analyst}{Infosys Limited}{Apr 2022 -- Jan 2024}{Hyderabad, Telangana}
+\begin{itemize}
+  \item[\faClipboardCheck] Reviewed requirements, authored test cases for manual and automation testing.
+  \item[\faDesktop] Performed functional, UI, and API testing across environments.
+  \item[\faCogs] Built automation scripts with Selenium and integrated with CI/CD tools.
+  \item[\faBug] Logged and managed defects; coordinated closely with developers for resolution.
+  \item[\faProjectDiagram] Actively participated in Agile ceremonies and supported sprint-based testing.
+\end{itemize}
+
+\divider
+
+\cvevent{\faUser\ \ Test Engineer}{Tata Consultancy Services Limited}{Jan 2019 -- Apr 2022}{Bhubaneswar, Odisha}
+\begin{itemize}
+  \item[\faClipboardList] Wrote and executed test cases based on system and business requirements.
+  \item[\faCogs] Conducted manual and automated tests to validate core functionalities.
+  \item[\faBug] Reported and tracked bugs using defect management tools.
+  \item[\faUsers] Worked in cross-functional Agile teams to ensure quality deliverables.
+\end{itemize}
+
+
+
+
+
+\cvsection{Education}
+
+\cvevent{\faGraduationCap\ \ B.Tech in Electronics and Communication Engineering(ECE)}{JNTU - Kakinada}{Sept 2014 -- May 2018}{}%
+Institution: MVGR College of Engineering, Vizianagaram\\
+Percentage: 73.59
+
+\divider
+
+\cvevent{\faSchool\ \ Intermediate (HSC)}{Board of Intermediate Education - AP}{June 2012 -- May 2014}{}%
+Institution: Narayana Junior College, Visakhapatnam\\
+Percentage: 96.9
+
+\cvsection{Extra Activities}
+\begin{itemize}
+  \item[$\star$] Coordinated team availability for weekend testing drives .
+
+  \item[$\star$] Facilitated internal knowledge-sharing sessions and workshops.
+  \item[$\star$] Managed onboarding/offboarding processes for team members.
+  \item[$\star$] Organized team-building events and offsite activities.
+
+
+
+
+\end{itemize}
+
+
+
+
+\switchcolumn
+
+
+
+\cvsection{Projects}
+
+
+
+
+\cvevent{Westpac}{Domain: Banking  |  Location: Hyderabad, Telangana}{Project Duration: February 2023 -- Present}{}
+Worked as QA Lead on Westpac’s KYC (Know Your Customer) web application — a core compliance platform used for onboarding and verifying customers in one of Australia's largest banks.
+\begin{itemize}
+  \item Led QA efforts for the entire KYC onboarding module covering identity verification, document upload, biometric validation, and real-time status tracking.
+ % \item Led a QA team of 5, conducted code reviews, and ensured 95\% automation test coverage using modular, maintainable frameworks.
+  \item Actively participated in designing and implementing a modular Selenium-based automation framework aligned with Appian workflows and reusable utilities.
+  \item Defined test strategy, traceability matrix, regression suites, and test plans aligned with business goals, reducing production issues by 30\%.
+  \item Set up and managed test environments using Docker and Jenkins.
+  \item Performed root cause analysis of UAT/production issues and enhanced test scenarios based on incident patterns.
+ % \item Collaborated with developers and DevOps to identify automation opportunities and streamline release processes.
+  \item Tools/Technologies: Selenium, RestAssured, Jenkins, Bitbucket, Selenium Grid, Java, SQL, Jira., Mabl.
+  \item Frameworks: Page Object Model (POM) Design, Data-Driven Framework (LTA Framework - Internal).
+\end{itemize}
+
+
+\divider
+
+\cvevent{Farmers Insurance}{Domain: Insurance  |  Location: Hyderabad, Telangana}{May 2022 -- January 2023}{}
+Worked as a Test Analyst on UI and API automation for Farmers Insurance, a major U.S.-based provider of auto, home, and life insurance.
+\begin{itemize}
+  \item Automated 500+ UI and API test cases using Selenium  and RestAssured with a 95\% pass rate.
+  \item Integrated automation into Azure DevOps pipelines for nightly and on-demand runs.
+  \item Developed reusable test scripts for customer address validation, premium calculations, and policy document generation.
+  \item Contributed to functional, regression, and smoke test cycles as part of Agile sprints.
+  \item Tools/Technologies: Selenium, TestNG, RestAssured, Github,Jenkins, Docker, Silkuli.
+  \item Frameworks: Hybrid (Page Object Model + Data Driven).
+\end{itemize}
+
+
+\cvevent{CIBC}{Domain: Banking  |  Location: Bhubaneswar, Odisha}{January 2020 -- April 2022}{}
+Worked as a Test Analyst on API and manual testing for CIBC Cards — supporting digital payments for credit, debit, and prepaid cards in one of Canada's top banks.
+\begin{itemize}
+  \item Designed and executed test cases for card services and validated 100+ REST API endpoints.
+  \item Automated API testing using RestAssured, reducing manual effort by ~60\%.
+  \item Performed end-to-end testing for card operations like activation, blocking and transaction history.
+  \item Integrated tests into Jenkins pipelines for nightly execution and early bug detection.
+ % \item Collaborated with business teams during UAT, defect triage, and RCA sessions.
+  \item Tools/Technologies: Postman, RestAssured, SQL, Jira.
+  \item Frameworks: REST-assured, BDD with Cucumber.
+\end{itemize}
+
+\cvevent{LIDL}{Domain: E-Commerce  |  Location: Trivandrum, Kerala}{March 2019 -- December 2020}{}
+Worked as a Test Engineer on UI and performance testing for Lidl’s global e-commerce platform supporting shopping, checkout, and campaign modules.
+\begin{itemize}
+  \item Tested product search and checkout features on desktop and mobile web platforms.
+  \item Developed Cypress automation for cart, payment, and order confirmation flows.
+  \item Conducted performance testing with JMeter, simulating 5000+ users.
+ % \item Improved test execution time by 35\% through test automation.
+  \item Collaborated with dev teams on performance tuning and issue resolution.
+  \item Tools/Technologies: Cypress, JMeter, % LoadRunner, Grafana,
+  Applitools .
+  \item Frameworks: POM Design, Performance Framework.
+\end{itemize}
+
+\cvsection{Most Proud Of}
+
+\cvachievement{\faTrophy}{Insta Awards}{Recognized for contributing to team initiatives like certifications and training planning, project contributions etc.}
+
+
+\cvachievement{\faHeartbeat}{Client Appreciation}{Praised by clients for exploratory testing and analytical contributions.}
+
+
+
+\cvachievement{\faChartLine}{Career Milestone}{Promoted to Technical Test Lead within 5.2 years due to continuous performance and leadership.}
+\cvachievement{\faBrain}{AI Integration in Testing}{Led the integration of AI-powered testing tools like Applitools and Mabl, improving test accuracy and efficiency.}
+
+
+\cvachievement{\faUsers}{Client Engagement}{Successfully managed client relationships, delivering tailored testing solutions that resulted in increased client satisfaction and repeat business.}
+
+
+
+
+
+
+
+
+\end{paracol}
+\end{document}
